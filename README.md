@@ -67,7 +67,7 @@ db.users.insertOne({
     role: "superadmin"
 });
 ```
-### **2.2 Authentication**
+### **2.2 Authentication** (These API endpoints should be called on user port: 5111)
 
 1. **Register as a School Admin**
 ```
@@ -104,7 +104,7 @@ Response
 }
 
 ```
-### **2.3 School Management(Superadmin Only)**
+### **2.3 School Management(Superadmin Only)** (These API endpoints should be called on admin port: 5222)
 
 1. **Create a School**
 ```
@@ -123,7 +123,7 @@ GET /api/schools
 Authorization: Bearer <superadmin_token>
 
 ```
-### **2.4 Classroom Management (Superadmin and School Admin)**
+### **2.4 Classroom Management (Superadmin and School Admin)** (Port Number: 5111)
 
 1. **Create a Classroom**
 ```
@@ -177,7 +177,7 @@ GET /api/classroom/{SCHOOL_ID}
 Authorization: Bearer <token>
 ```
 
-### **2.5 Student Management (Superadmin and School Admin)**
+### **2.5 Student Management (Superadmin and School Admin)** (Port Number: 5111)
 
 1. **Enroll a Student**
 ```
