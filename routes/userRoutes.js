@@ -7,8 +7,8 @@ module.exports = (managers) => {
     // Register user
     router.post('/register', async (req, res) => {
         try {
-            const { username, email, password, role } = req.body;
-            const result = await userManager.createUser({ username, email, password, role });
+            const { username, email, password } = req.body;
+            const result = await userManager.createUser({ username, email, password });
             res.status(201).json(result);
         } catch (err) {
             res.status(400).json({ error: err.message });
